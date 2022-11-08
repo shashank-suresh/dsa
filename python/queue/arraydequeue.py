@@ -44,7 +44,7 @@ class ArrayDequeue:
         Raise Empty Exception if dequeue is empty
         """
         if self.is_empty():
-            Empty("Queue is empty")
+            raise Empty("Queue is empty")
         
         answer = self._data[self._front]
         self._data[self._front] = None
@@ -62,7 +62,7 @@ class ArrayDequeue:
         Raise Empty Exception if dequeue is empty
         """
         if self.is_empty():
-            Empty("Queue is empty")
+            raise Empty("Queue is empty")
 
         back = (self._front + self._size - 1) % len(self._data)
         answer = self._data[back]
@@ -80,7 +80,7 @@ class ArrayDequeue:
         Raise Empty Exception if dequeue is empty
         """
         if self.is_empty():
-            Empty("Queue is empty")
+            raise Empty("Queue is empty")
         
         return self._data[self._front]
 
@@ -90,7 +90,7 @@ class ArrayDequeue:
         Raise Empty Exception if dequeue is empty
         """
         if self.is_empty():
-            Empty("Queue is empty")
+            raise Empty("Queue is empty")
 
         back = (self._front + self._size - 1) % len(self._data)
         return self._data[back]

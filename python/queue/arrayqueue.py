@@ -26,7 +26,7 @@ class ArrayQueue:
         Raises Empty Exception if the queue is empty
         """
         if self.is_empty():
-            Empty("Queue is empty")
+            raise Empty("Queue is empty")
         return self._data[self._front]
     
     def dequeue(self):
@@ -35,7 +35,7 @@ class ArrayQueue:
         Raise Empty Exception if the queue is empty
         """
         if self.is_empty():
-            Empty("Queue is empty")
+            raise Empty("Queue is empty")
         answer = self._data[self._front]
         self._data[self._front] = None
         self._front = (self._front + 1) % len(self._data)

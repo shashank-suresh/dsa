@@ -37,7 +37,7 @@ class LinkedStack:
         Raise Empty Exception if the stack is empty
         """
         if self.is_empty():
-            Empty("Stack is empty")
+            raise Empty("Stack is empty")
         return self._head._element
 
     def pop(self):
@@ -46,7 +46,7 @@ class LinkedStack:
         Raise Empty Exception if the stack is empty
         """
         if self.is_empty():
-            Empty("Stack is empty")
+            raise Empty("Stack is empty")
         
         answer = self._head._element
         self._head = self._head._next
